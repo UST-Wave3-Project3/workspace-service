@@ -32,6 +32,8 @@ public class WorkspaceController {
 		return new ResponseEntity<List<Workspace>>(workspaceService.getAllWorkspaces(),HttpStatus.OK);
 	}
 	
+	
+	
 	@GetMapping("/{workspaceId}")
     public ResponseEntity<Optional<Workspace>> getWorkspaceById(@PathVariable int workspaceId) {
         return new ResponseEntity<Optional<Workspace>>(workspaceService.getWorkspaceById(workspaceId),HttpStatus.OK);
